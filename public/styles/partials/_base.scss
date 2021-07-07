@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+body {
+    min-width: 1500px;
+    min-height: 100vh;
+    background-image: linear-gradient(#fff, #fff, rgba($color: $pColor, $alpha: 0.2));
+    font-family: $pFont;
+    overflow: auto;
+    display: flex;
+    border-top: 5px solid $pColor;
+    border-bottom: 5px solid $pColor;
+    main{
+        width: 100%;
+        >div{
+            padding: 0 60px;
+        }
+    }
+}
+body.modalActive{
+    overflow: hidden;
+}
+
+button,
+input,
+select {
+    font-family: $pFont;
+}
+

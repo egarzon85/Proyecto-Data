@@ -1,0 +1,149 @@
+main {
+    .ctn_manager {
+        margin: 50px 0 60px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .search_section_ctn {
+            h1 {
+                color: $pColor;
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            > div {
+                position: relative;
+                width: 500px;
+                height: 40px;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0px 1px 3px #bbb;
+
+                > input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 70px 0 30px;
+                    outline: none;
+                    font-family: $pFont;
+                    font-size: 15px;
+                    position: relative;
+                    top: 0;
+                    z-index: 2;
+                }
+                input[type="search" i]::-webkit-search-cancel-button {
+                    display: none;
+                }
+                i {
+                    height: 100%;
+                    padding: 0 10px;
+                    position: absolute;
+                    top: 0px;
+                    cursor: pointer;
+                    color: $pColor;
+                    line-height: 40px;
+                    z-index: 3;
+                    &.search_btn {
+                        border-left: 1px solid $pColor;
+                        right: 0;
+                        &:hover {
+                            color: $sColor;
+                        }
+                    }
+                }
+            }
+        }
+        .searchTerms {
+            position: absolute;
+            bottom: -45%;
+            display: flex;
+            align-items: center;
+            li {
+                &:first-child {
+                    display: flex;
+                    align-items: center;
+                    
+                    &:after {
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        display: inline-block;
+                        margin: 0 10px;
+                        clip-path: polygon(0 0, 35% 0, 100% 50%, 35% 100%, 0 100%, 65% 50%);
+                        background-color: #000;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    a{
+                        color: $pColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .operations_section_ctn {
+            display: flex;
+            align-items: flex-end;
+            i {
+                margin: 0 10px;
+                width: 42px;
+                height: 42px;
+                position: relative;
+                text-align: center;
+                line-height: 42px;
+                color: $pColor;
+                transition: all 0.2s ease;
+                border-radius: 25px;
+                box-shadow: 0px 1px 5px #ccc;
+                &:hover {
+                    box-shadow: 0px 3px 13px -7px #000000;
+                    transform: translateY(-2px);
+                }
+
+                &::before {
+                    position: absolute;
+                    right: 14px;
+                    top: 3px;
+                }
+                &::after {
+                    content: "";
+                    width: 20px;
+                    height: 2px;
+                    background-color: $pColor;
+                    display: inline-block;
+                    position: absolute;
+                    top: 12px;
+                    right: 11px;
+                }
+            }
+            button {
+                padding: 11px 30px;
+                margin: 0px 10px;
+                font-size: 16px;
+                border-radius: 25px;
+                box-shadow: 0px 1px 5px #ccc;
+                &.add_contact {
+                    background-color: $pColor;
+                    color: #fff;
+                    transition: all 0.2s ease;
+                    margin-right: 0;
+
+                    &:hover {
+                        box-shadow: 0px 3px 13px -7px #000000;
+                        transform: translateY(-2px);
+                    }
+                }
+                &.exp_contact {
+                    background-color: transparent;
+                    box-sizing: content-box;
+                    color: $pColor;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        box-shadow: 0px 3px 13px -7px #000000;
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+}

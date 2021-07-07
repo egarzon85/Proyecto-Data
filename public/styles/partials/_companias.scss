@@ -1,0 +1,175 @@
+.all_companies {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    .company_card {
+        border-radius: 25px;
+        box-shadow: 0 1px 5px #ccc;
+        background-color: #fff;
+        padding: 20px 30px;
+        margin: 10px 0;
+        position: relative;
+        overflow: hidden;
+        text-transform: capitalize;
+        min-height: 245px;
+        .seemore_card {
+            position: absolute;
+            padding: 5px 10px;
+            border-radius: 25px;
+            background-color: $tColor;
+            color: #fff;
+            font-size: 14px;
+            top: 25px;
+            right: 30px;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
+            &:hover {
+                background-color: #eee;
+                color: $tColor;
+            }
+        }
+        h2 {
+            padding-bottom: 10px;
+            padding-right: 80px;
+            font-size: 1.5em;
+            border-bottom: 3px solid $pColor;
+        }
+
+        .info_company {
+            margin: 15px 0;
+            span {
+                display: inline-block;
+                font-weight: bold;
+                margin-bottom: 7px;
+            }
+            p {
+                &:last-child {
+                    font-size: 14px;
+                }
+            }
+        }
+        .users_company {
+            p {
+                margin-bottom: 7px;
+                font-weight: bold;
+            }
+            > div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-left: -10px;
+                    border: 2px solid #fff;
+                    border-radius: 25px;
+                    object-fit: cover;
+                    box-shadow: 0 0 5px #bbb;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .not_found {
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $pFont;
+        grid-area: 1/1/1/5;
+        h3 {
+            font-size: 38px;
+        }
+        img {
+            width: 400px;
+        }
+        p {
+            font-size: 20px;
+            &.palabra {
+                font-size: 28px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.bgInfoCompany {
+    @extend %bgManagers;
+    .box_company {
+        width: 1100px;
+        height: 550px;
+        border-radius: 30px;
+        background-color: #fff;
+        padding: 30px 50px;
+        flex-direction: column;
+        position: relative;
+        text-transform: capitalize;
+        animation-name: comeToWindow;
+        animation-duration: 0.25s;
+        animation-timing-function: linear;
+
+        .close_btn {
+            @extend %btnClose;
+        }
+        h2 {
+            font-size: 2.5em;
+            padding: 0 0 10px;
+            border-bottom: 4px solid $pColor;
+        }
+        .acciones {
+            width: 100px;
+            height: 36px;
+            position: absolute;
+            top: 35px;
+            right: 80px;
+            align-items: center;
+            i {
+                font-size: 30px;
+            }
+            &.active {
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+        > .location {
+            display: flex;
+            margin: 20px 0;
+            align-items: center;
+            i {
+                font-size: 25px;
+                margin-right: 33px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        .contacts {
+            > div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                i {
+                    font-size: 25px;
+                    margin-right: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+            .contactsUl {
+                @extend %ulContactsModals;
+                min-height: 300px;
+                max-height: 300px;
+            }
+        }
+    }
+}

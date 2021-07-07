@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$pFont: "Montserrat", sans-serif;
+$sFont: "Nunito", sans-serif;
+
+//'Lato', sans-serif
+$pColor: #ff727f;
+$sColor: #ffa79b;
+$tColor: #ff727f;
+$cColor: #ffa79b;
+
+%bgManagers {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%imgStyles {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-right: 10px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+@keyframes comeToWindow {
+    0% {
+        transform: scale(0.7);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+%btnClose {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.6);
+    }
+}
+
+%ulContactsModals {
+    width: 100%;
+    min-height: 220px;
+    max-height: 220px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 7px #ccc;
+    overflow: auto;
+    li {
+        display: grid;
+        grid-template-columns: 60px 220px 190px 220px 1fr;
+        align-items: center;
+        border-bottom: 2px solid #eee;
+        padding: 10px 0;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            object-fit: cover;
+            margin-right: 10px;
+            box-shadow: 0 0 5px #ddd;
+        }
+        .infoContact {
+            .email {
+                color: #555;
+                font-size: 12px;
+                text-transform: lowercase;
+            }
+        }
+        .location{
+            .country{
+                color: #555;
+                font-size: 12px;
+            }
+        }
+        &:last-child {
+            border: 0;
+        }
+    }
+    &.noContacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+// lista colores
+
+/*
+naranja fuerte: #ff841f;
+
+azul fuerte : 070d59
+fucsia: ea2c62
+lila: 6a097d
+
+rosa lindo claro: ffdada
+rosa lindo oscuro: fd6e6e;
+
+amarillo: ffda77
+
+
+*/
+
+/*
+#9effaf
+#BAA4F2
+
+*/

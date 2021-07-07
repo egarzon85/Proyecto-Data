@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=https://use.fontawesome.com/releases/v5.13.0/css/all.css>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Data Warehouse</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="assets/logo.png" alt="Logo Data Warehouse">
+        </a>
+
+        <nav>
+            <ul>
+                <li class="li_active"><a href="index.html">Contactos</a></li>
+                <li class="usersHeaderOption"><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="companias.html">Compañías</a></li>
+                <li><a href="regiones.html">Región/Ciudad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="user_section">
+            <div class="user_logged" id="userLogued"></div>
+            <button id="logOutBtn">Cerrar Sesión</button>
+        </div>
+        <div>
+            <div class="ctn_manager">
+                <div class="search_section_ctn">
+                    <h1> Contactos</h1>
+                    <div id="searchSection">
+                        <input type="search" autocomplete="off" id="input_contactos"
+                            placeholder="Busque un Contacto, Ubicación, Email o Cargo">
+                        <i class="fas fa-search search_btn" id="search_contactos"></i>
+                    </div>
+                </div>
+                <div class="operations_section_ctn">
+
+                    <i class="fas fa-arrow-up imp_contact" id="impContact"></i>
+                    <button class="exp_contact">Exportar contactos</button>
+                    <button class="add_contact" id="addContact">Agregar contacto</button>
+                </div>
+            </div>
+            <div class="all_contacts">
+
+                <div class="header_section">
+
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="selectAllContacts" class="allCheckSelect">
+                        </li>
+                        <li>Contacto</li>
+                        <li>País/Región</li>
+                        <li>Compañía</li>
+                        <li>Cargo</li>
+                        <li>Canales</li>
+                        <li>Interés</li>
+                        <li>Acciones</li>
+                    </ul>
+
+                </div>
+                <div class="contacts_section" id="contactsSection"></div>
+            </div>
+            <div class="footer_section">
+                <div class="rows_per_page">
+                    <p>Filas por página</p>
+                    <select class="options_rows" id="optionsRows">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="pages">
+                    <p>
+                        <span id="firstContactRow"></span>-<span id="lastContactRow"></span> de
+                        <span id="totalContacts"></span> filas
+                    </p>
+                    <button class="prev_page" id="prevPage"> 🡠 </button>
+                    <button class="next_page" id="nextPage"> 🡢 </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/htmlText.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/searcher.js"></script>
+    <script src="scripts/contacts/contactManager.js"></script>
+    <script src="scripts/contacts/getContacts.js"></script>
+    <script src="scripts/contacts/searcherContacts.js"></script>
+</body>
+
+</html>
