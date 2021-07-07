@@ -23,7 +23,7 @@ Se va a necesitar nodejs. Puedes comprobar si ya lo tienes instalado en tu siste
 
 ### 2 - Clonar proyecto e instalación de dependencias
 
-`git clone https://github.com/egarzon85/datawarehouse.git`
+`git clone https://github.com/egarzon85/Proyecto-Data.git`
 
 `cd datawarehouse`
 
