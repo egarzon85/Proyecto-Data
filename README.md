@@ -29,6 +29,8 @@ Se va a necesitar nodejs. Puedes comprobar si ya lo tienes instalado en tu siste
 
 `npm install`
 
+Nota: Para el correcto funcionamiento asegurarse que la carpeta "Proyecto-Data" no quede alojada dentro de una subcarpeta.
+
 ### 3 - Creación e inicializacion base de datos
 
 - Descargar e Instalar [XAMPP](http://sourceforge.net/projects/xampp/files/).
